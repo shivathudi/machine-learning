@@ -31,7 +31,6 @@ def parse_file(filename):
     """
     user_ratings = {}
     movie_ratings = {}
-    # Your code here
     with open(filename, 'rb') as f:
         reader = csv.reader(f)
         for row in reader:
@@ -59,7 +58,6 @@ def compute_average_user_ratings(user_ratings):
     Output: ave_ratings (dictionary of user and ave_ratings)
     """
     ave_ratings = coll.defaultdict(float)
-    # Your code here
     for each_user in user_ratings.keys():
 
         ratings_list = user_ratings[each_user].values()
@@ -77,7 +75,6 @@ def compute_user_similarity(d1, d2, ave_rat1, ave_rat2):
             ave_rat1, ave_rat2 average rating per user (float)
         Output: user similarity (float)
     """
-    # Your code here
     intersection_movies = d1.viewkeys() & d2.viewkeys()
 
     if len(intersection_movies) == 0:
@@ -107,7 +104,6 @@ def main():
     train_file = args['train'][0]
     test_file = args['test'][0]
     print train_file, test_file
-    # your code here
 
     user_ratings, movie_ratings = parse_file(train_file)
     ave_ratings = compute_average_user_ratings(user_ratings)
