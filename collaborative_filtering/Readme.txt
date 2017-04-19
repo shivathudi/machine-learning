@@ -1,4 +1,4 @@
-The script can be run from the command line:
+The data needs to be unzipped first. After that, the script can be run from the command line:
 
 python cf.py  --train TrainingRatings.txt --test TestingRatingsMedium.txt
 
